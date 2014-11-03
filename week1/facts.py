@@ -4,6 +4,9 @@ import json
 """
 Modify these please
 """
+
+class Exterminate
+
 url='http://192.168.1.123/ins'
 switchuser='admin'
 switchpassword='Cisco.com'
