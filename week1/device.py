@@ -54,9 +54,9 @@ class Device(object):
         self._passw = new_passw
         
     def __str__(self):
-        return "{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+        return "{\"device\": { \"name\": \""+str(self.name)+"\", \"ip\": \""+str(self._ip)+"\", \"user\": \""+str(self._user)+"\", \"passw\": \""+str(self._passw)+"\"}}"
     def __repr__(self):
-        return "{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+        return "{\"device\": { \"name\": \""+str(self.name)+"\", \"ip\": \""+str(self._ip)+"\", \"user\": \""+str(self._user)+"\", \"passw\": \""+str(self._passw)+"\"}}"
     def __unicode__(self):
-        return u"{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+        return "{\"device\": { \"name\": \""+str(self.name)+"\", \"ip\": \""+str(self._ip)+"\", \"user\": \""+str(self._user)+"\", \"passw\": \""+str(self._passw)+"\"}}"
         
