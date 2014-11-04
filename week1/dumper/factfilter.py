@@ -2,9 +2,6 @@
 """ factfilter.py
 """
 
-import json
-
-
 class FactFilter(object):
     """ FactFilter Class
     """
@@ -13,29 +10,39 @@ class FactFilter(object):
         pass
 
     def initfilter(self, factdict):
+
+        #factkey is name of fact family
+        #factvalue is the dictionary that represents the facts in that family
+
+        #Loop through each fact family, filtering each one as you go along
         for factkey, factvalue in factdict.iteritems():
             if factkey == 'cdp':
                 factdict['cdp'] = self.filtercdp(factkey, factvalue)
+
+        #Return filtered fact dictionary, with all families
         return factdict
 
     def filtercdp(self, factkey, factvalue):
         pruneddict = {}
 
+        #Get rid of extra NXAPI crap
         pruneddict = factvalue['TABLE_cdp_neighbor_detail_info']['ROW_cdp_neighbor_detail_info']
 
-        #print pruneddict
-
+        #This is a list of keys to delete
         delkeys = [
-            'ttl'
+            'ttl',
+            'mtu'
         ]
-
-#        print pruneddict[0]
 
         #Loop through all CDP neighbor entries
         for entry in pruneddict:
-            print entry
+
             #Delete all keys listed in delkeys
             for key in delkeys:
-                del entry['ttl']
+                try:
+                    del entry[key]
+                except:
+                    #Key doesn't exist, nothing to do
+                    pass
 
         return pruneddict

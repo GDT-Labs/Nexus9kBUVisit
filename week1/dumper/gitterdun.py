@@ -8,6 +8,7 @@ from git import Repo
 
 import uuid
 
+
 class MyGit(object):
     """ Git stuff goes here
     """
