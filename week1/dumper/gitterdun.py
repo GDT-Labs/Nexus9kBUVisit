@@ -13,10 +13,10 @@ class MyGit(object):
     """ Git stuff goes here
     """
 
-    def __init__(self):
+    def __init__(self, repodir):
         """ Creates a git object """
 
-        self.repo = Repo("/Users/mierdin/Code/Nexus9kBUVisit")
+        self.repo = Repo(repodir)
         assert self.repo.bare == False
 
     def addfile(self, filename):

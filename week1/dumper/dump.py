@@ -50,7 +50,7 @@ class Dumper(object):
                     indent=4, separators=(',', ': ')))
 
         #Create new Git object
-        thisGit = MyGit()
+        thisGit = MyGit(os.path.join(os.path.dirname(__file__), '../../', ''))
 
         # Stage entire facts directory
         thisGit.addfile(factsDir)
