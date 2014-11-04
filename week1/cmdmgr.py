@@ -1,7 +1,7 @@
 import yaml
 
 
-class CommandManager:
+class CommandManager(object):
     """
     Load commands and devices from YAML command file
     and passes the information back to the requestor.
