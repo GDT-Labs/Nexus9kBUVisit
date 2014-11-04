@@ -12,3 +12,5 @@ Team Members:
 - Brett Kugler
 - Greg Clark
 - Matt Oswalt
+
+The cmds.yaml file is provided as an example input to the Command manager.
