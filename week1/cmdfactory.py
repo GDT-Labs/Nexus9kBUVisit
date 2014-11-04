@@ -12,7 +12,7 @@ class CommandFactory(object):
     def __init__(self):
         self.device = None
         self.command_list = []
-        self.cmd_response = []
+        self.cmd_response = {}
 
     def process_device(self, dev, commands):
         """
