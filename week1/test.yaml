@@ -1,0 +1,12 @@
+Commands:
+    CDP: show cdp neighbor
+
+Devices:
+    - Device: Test
+        IP: 127.0.0.1
+        User: admin
+        Password: admin
+    - Device: Test2
+        IP: 0.0.0.0
+        User: root
+        Password: root
