@@ -1,87 +1,24 @@
 {
-    "TABLE_cdp_neighbor_brief_info": {
-        "ROW_cdp_neighbor_brief_info": [
-            {
-                "capability": "IGMP_cnd_filtering",
-                "device_id": "GDT-STAGING-6509-1.gdtstaging.local",
-                "ifindex": 83886080,
-                "intf_id": "mgmt0",
-                "platform_id": "cisco WS-C6509",
-                "port_id": "FastEthernet7/21",
-                "ttl": 127
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436207616,
-                "intf_id": "Ethernet1/1",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/1",
-                "ttl": 166
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436208128,
-                "intf_id": "Ethernet1/2",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/2",
-                "ttl": 166
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436208640,
-                "intf_id": "Ethernet1/3",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/3",
-                "ttl": 166
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436209152,
-                "intf_id": "Ethernet1/4",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/4",
-                "ttl": 169
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436209664,
-                "intf_id": "Ethernet1/5",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/2",
-                "ttl": 175
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436210176,
-                "intf_id": "Ethernet1/6",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/4",
-                "ttl": 176
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436210688,
-                "intf_id": "Ethernet1/7",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/1",
-                "ttl": 175
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436211200,
-                "intf_id": "Ethernet1/8",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/3",
-                "ttl": 175
-            }
-        ]
-    }
+    "bios_cmpl_time": "06/29/2014",
+    "bios_ver_str": "07.15",
+    "bootflash_size": 21693714,
+    "chassis_id": "Nexus9000 C9396PX Chassis",
+    "cpu_name": "Intel(R) Core(TM) i3-3227U C",
+    "header_str": "Cisco Nexus Operating System (NX-OS) Software\nTAC support: http://www.cisco.com/tac\nCopyright (C) 2002-2014, Cisco and/or its affiliates.\nAll rights reserved.\nThe copyrights to certain works contained in this software are\nowned by other third parties and used and distributed under their own\nlicenses, such as open source.  This software is provided \"as is,\" and unless\notherwise stated, there is no warranty, express or implied, including but not\nlimited to warranties of merchantability and fitness for a particular purpose.\nCertain components of this software are licensed under\nthe GNU General Public License (GPL) version 2.0 or \nGNU General Public License (GPL) version 3.0  or the GNU\nLesser General Public License (LGPL) Version 2.1 or \nLesser General Public License (LGPL) Version 2.0. \nA copy of each such license is available at\nhttp://www.opensource.org/licenses/gpl-2.0.php and\nhttp://opensource.org/licenses/gpl-3.0.html and\nhttp://www.opensource.org/licenses/lgpl-2.1.php and\nhttp://www.gnu.org/licenses/old-licenses/library.txt.\n",
+    "host_name": "NX9396-01",
+    "kern_uptm_days": 27,
+    "kern_uptm_hrs": 6,
+    "kern_uptm_mins": 52,
+    "kern_uptm_secs": 3,
+    "kick_cmpl_time": " 9/27/2014 23:00:00",
+    "kick_file_name": "bootflash:///n9000-dk9.6.1.2.i3.1.bin",
+    "kick_tmstmp": "09/28/2014 06:23:37",
+    "kickstart_ver_str": "6.1(2)I3(1)",
+    "manufacturer": "Cisco Systems, Inc.",
+    "mem_type": "kB",
+    "memory": 16402544,
+    "proc_board_id": "SAL1814PHJF",
+    "rr_reason": "Unknown",
+    "rr_service": "",
+    "rr_sys_ver": "6.1(2)I3(1)"
 }
