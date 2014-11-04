@@ -9,8 +9,7 @@ from git import Repo
 import uuid
 
 class MyGit(object):
-    """ Dumper class. Used to dump facts to the filesystem
-        and monitor via the Git API
+    """ Git stuff goes here
     """
 
     def __init__(self):
