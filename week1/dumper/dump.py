@@ -8,13 +8,14 @@
 import json
 from factfilter import FactFilter
 from gitterdun import MyGit
+import os
 
 
 class Dumper(object):
     """ Dumper class. Used to dump facts to the filesystem
     """
 
-    def __init__(self, facts):
+    def __init__(self, facts, deviceid):
         """ Creates a Dumper object """
 
         #Run through the filter
@@ -23,19 +24,38 @@ class Dumper(object):
         filteredDict = thisFilter.initfilter(facts)
 
         for name, table in filteredDict.iteritems():
-            self.dumpfact(name, table)
+            self.dumpfact(name, table, deviceid)
 
-    def dumpfact(self, name, table):
+    def dumpfact(self, name, table, deviceid):
 
-        filename = '/Users/mierdin/Code/Nexus9kBUVisit/week1/facts/' + name + '.json'
+        # Get 'facts' directory
+        factsDir = os.path.abspath(os.path.join(
+            os.path.dirname(__file__), os.pardir, 'facts')
+        )
 
+        # Get device directory
+        deviceDir = os.path.join(factsDir, deviceid)
+
+        # Create device directory if needed
+        if not os.path.exists(deviceDir):
+            os.makedirs(deviceDir)
+
+        # Device file name
+        filename = deviceDir + '/' + name + '.json'
+
+        #Write facts to file
         with open(filename, 'w') as f:
 
             f.write(json.dumps(table, sort_keys=True,
                     indent=4, separators=(',', ': ')))
 
+        #Create new Git object
         thisGit = MyGit()
-        thisGit.addfile(filename)
+
+        # Stage entire facts directory
+        thisGit.addfile(factsDir)
+
+        # Commit (not push) changes
         thisGit.commitchanges()
 
 
@@ -65,4 +85,4 @@ if __name__ == '__main__':
 
     #No need for json.loads if being handed a dict as it is, which is what the requests module does
     facts['cdp'] = cdpinfo['ins_api']['outputs']['output']['body']
-    thisDumper = Dumper(facts)
+    thisDumper = Dumper(facts, "SAL12345")
