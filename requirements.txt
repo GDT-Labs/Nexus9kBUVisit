@@ -1,0 +1,2 @@
+gitpython==0.3.2.RC1
+uuid>=1.30
