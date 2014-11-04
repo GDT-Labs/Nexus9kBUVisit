@@ -1,12 +1,13 @@
 Commands:
-    CDP: show cdp neighbor
+    - CDP: show cdp neighbor
+    - VERSION: show version
 
 Devices:
-    - Device: Test
-        IP: 127.0.0.1
-        User: admin
-        Password: admin
-    - Device: Test2
-        IP: 0.0.0.0
-        User: root
-        Password: root
+    - DeviceName: Test
+      IP: 127.0.0.1
+      User: admin
+      Password: admin
+    - DeviceName: Test2
+      IP: 0.0.0.0
+      User: root
+      Password: root
