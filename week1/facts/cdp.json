@@ -7,80 +7,116 @@
                 "ifindex": 83886080,
                 "intf_id": "mgmt0",
                 "platform_id": "cisco WS-C6509",
-                "port_id": "FastEthernet7/21",
-                "ttl": 172
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436207616,
-                "intf_id": "Ethernet1/1",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/1",
-                "ttl": 146
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436208128,
-                "intf_id": "Ethernet1/2",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/2",
-                "ttl": 147
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436208640,
-                "intf_id": "Ethernet1/3",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/3",
-                "ttl": 148
-            },
-            {
-                "capability": "Supports-STP-Dispute",
-                "device_id": "NX9508-01(FGE174702XX)",
-                "ifindex": 436209152,
-                "intf_id": "Ethernet1/4",
-                "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/4",
-                "ttl": 149
+                "port_id": "FastEthernet7/37",
+                "ttl": 141
             },
             {
                 "capability": "Supports-STP-Dispute",
                 "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436209664,
-                "intf_id": "Ethernet1/5",
+                "ifindex": 436256768,
+                "intf_id": "Ethernet1/1/1",
                 "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/2",
-                "ttl": 145
+                "port_id": "Ethernet1/1/1",
+                "ttl": 132
             },
             {
                 "capability": "Supports-STP-Dispute",
                 "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436210176,
-                "intf_id": "Ethernet1/6",
+                "ifindex": 436257280,
+                "intf_id": "Ethernet1/1/2",
                 "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/4",
-                "ttl": 148
+                "port_id": "Ethernet1/1/2",
+                "ttl": 132
             },
             {
                 "capability": "Supports-STP-Dispute",
                 "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436210688,
-                "intf_id": "Ethernet1/7",
+                "ifindex": 436257792,
+                "intf_id": "Ethernet1/1/3",
                 "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/1",
-                "ttl": 145
+                "port_id": "Ethernet1/1/3",
+                "ttl": 133
             },
             {
                 "capability": "Supports-STP-Dispute",
                 "device_id": "NX9508-02(FGE174702Y7)",
-                "ifindex": 436211200,
-                "intf_id": "Ethernet1/8",
+                "ifindex": 436258304,
+                "intf_id": "Ethernet1/1/4",
                 "platform_id": "N9K-C9508",
-                "port_id": "Ethernet1/3/3",
-                "ttl": 145
+                "port_id": "Ethernet1/1/4",
+                "ttl": 133
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9508-02(FGE174702Y7)",
+                "ifindex": 436258816,
+                "intf_id": "Ethernet1/2/1",
+                "platform_id": "N9K-C9508",
+                "port_id": "Ethernet1/2/1",
+                "ttl": 133
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9508-02(FGE174702Y7)",
+                "ifindex": 436259328,
+                "intf_id": "Ethernet1/2/2",
+                "platform_id": "N9K-C9508",
+                "port_id": "Ethernet1/2/2",
+                "ttl": 134
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9508-02(FGE174702Y7)",
+                "ifindex": 436259840,
+                "intf_id": "Ethernet1/2/3",
+                "platform_id": "N9K-C9508",
+                "port_id": "Ethernet1/2/3",
+                "ttl": 137
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9508-02(FGE174702Y7)",
+                "ifindex": 436260352,
+                "intf_id": "Ethernet1/2/4",
+                "platform_id": "N9K-C9508",
+                "port_id": "Ethernet1/2/4",
+                "ttl": 137
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9396-01(SAL1814PHJF)",
+                "ifindex": 436260864,
+                "intf_id": "Ethernet1/3/1",
+                "platform_id": "N9K-C9396PX",
+                "port_id": "Ethernet1/1",
+                "ttl": 169
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9396-01(SAL1814PHJF)",
+                "ifindex": 436261376,
+                "intf_id": "Ethernet1/3/2",
+                "platform_id": "N9K-C9396PX",
+                "port_id": "Ethernet1/2",
+                "ttl": 169
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9396-01(SAL1814PHJF)",
+                "ifindex": 436261888,
+                "intf_id": "Ethernet1/3/3",
+                "platform_id": "N9K-C9396PX",
+                "port_id": "Ethernet1/3",
+                "ttl": 170
+            },
+            {
+                "capability": "Supports-STP-Dispute",
+                "device_id": "NX9396-01(SAL1814PHJF)",
+                "ifindex": 436262400,
+                "intf_id": "Ethernet1/3/4",
+                "platform_id": "N9K-C9396PX",
+                "port_id": "Ethernet1/4",
+                "ttl": 173
             }
         ]
     }
