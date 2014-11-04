@@ -39,3 +39,9 @@ class Device(object):
     @passw.setter
     def passw(self, new_passw):
         self._passw = new_passw
+        
+    def __str__(self):
+        return "{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+    def __unicode__(self):
+        return u"{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+        
