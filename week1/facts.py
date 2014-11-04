@@ -22,8 +22,8 @@ class Facts(object):
             'Accept-Language': 'en-US'}
 
         print 'Processing facts'
-        print self.command_list
-        print self.device.ip
+        #print self.command_list
+        #print self.device.ip
 
         nx_reqestor = nxapirest.NXRestAPI('http://' + self.device.ip + '/ins')
         for cmd in self.command_list:
@@ -50,7 +50,7 @@ class Facts(object):
             }
         }
 
-        print payload
+        #print payload
         return payload
 
 
