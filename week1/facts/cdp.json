@@ -8,7 +8,7 @@
                 "intf_id": "mgmt0",
                 "platform_id": "cisco WS-C6509",
                 "port_id": "FastEthernet7/37",
-                "ttl": 141
+                "ttl": 150
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -17,7 +17,7 @@
                 "intf_id": "Ethernet1/1/1",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/1/1",
-                "ttl": 132
+                "ttl": 163
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -26,7 +26,7 @@
                 "intf_id": "Ethernet1/1/2",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/1/2",
-                "ttl": 132
+                "ttl": 163
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -35,7 +35,7 @@
                 "intf_id": "Ethernet1/1/3",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/1/3",
-                "ttl": 133
+                "ttl": 163
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -44,7 +44,7 @@
                 "intf_id": "Ethernet1/1/4",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/1/4",
-                "ttl": 133
+                "ttl": 163
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -53,7 +53,7 @@
                 "intf_id": "Ethernet1/2/1",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/2/1",
-                "ttl": 133
+                "ttl": 163
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -62,7 +62,7 @@
                 "intf_id": "Ethernet1/2/2",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/2/2",
-                "ttl": 134
+                "ttl": 164
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -71,7 +71,7 @@
                 "intf_id": "Ethernet1/2/3",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/2/3",
-                "ttl": 137
+                "ttl": 168
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -80,7 +80,7 @@
                 "intf_id": "Ethernet1/2/4",
                 "platform_id": "N9K-C9508",
                 "port_id": "Ethernet1/2/4",
-                "ttl": 137
+                "ttl": 168
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -89,7 +89,7 @@
                 "intf_id": "Ethernet1/3/1",
                 "platform_id": "N9K-C9396PX",
                 "port_id": "Ethernet1/1",
-                "ttl": 169
+                "ttl": 139
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -98,7 +98,7 @@
                 "intf_id": "Ethernet1/3/2",
                 "platform_id": "N9K-C9396PX",
                 "port_id": "Ethernet1/2",
-                "ttl": 169
+                "ttl": 140
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -107,7 +107,7 @@
                 "intf_id": "Ethernet1/3/3",
                 "platform_id": "N9K-C9396PX",
                 "port_id": "Ethernet1/3",
-                "ttl": 170
+                "ttl": 140
             },
             {
                 "capability": "Supports-STP-Dispute",
@@ -116,7 +116,7 @@
                 "intf_id": "Ethernet1/3/4",
                 "platform_id": "N9K-C9396PX",
                 "port_id": "Ethernet1/4",
-                "ttl": 173
+                "ttl": 143
             }
         ]
     }
