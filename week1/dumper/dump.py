@@ -49,8 +49,12 @@ class Dumper(object):
             f.write(json.dumps(table, sort_keys=True,
                     indent=4, separators=(',', ': ')))
 
+        weekone = os.path.join(os.path.dirname(__file__), os.pardir, '')
+        repodir = os.path.join(os.path.dirname(weekone), os.pardir, '')
+
         #Create new Git object
-        thisGit = MyGit(os.path.join(os.path.dirname(__file__), '../../', ''))
+        thisGit = MyGit(repodir)
+
 
         # Stage entire facts directory
         thisGit.addfile(factsDir)
