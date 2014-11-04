@@ -18,7 +18,7 @@ class NXRestAPI(object):
         self.user = "admin"
         self.password = "Cisco.com"
 
-    def get_nexus_info_request(self, url, headers=None,
+    def get_nexus_info_request(self, url=None, headers=None,
                                payload=None):
         """
         Used for Nexus API REST API HTTP Get requests
@@ -37,10 +37,14 @@ class NXRestAPI(object):
             self.headers = headers
         if url is not None:
             self.url = url
+
+        print self.headers
+
         try:
             resp = requests.post(self.url, data=payload, headers=self.headers,
                                  verify=False, auth=auth)
 
+            print resp
             if resp.status_code == requests.codes.ok:
                 #print resp.content
                 return resp
