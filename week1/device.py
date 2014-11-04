@@ -1,8 +1,11 @@
 class Device(object):
     # Initializer
-    def __init__(self, name, ip, user, passw):
+    def __init__(self, ip, user, passw, name = None):
         # An instance variable to hold the device's name, ip address, username and password
-        self._name = name
+        if name == None:
+            self._name = ip
+        else:
+            self._name = name
         self._ip = ip
         self._user = user
         self._passw = passw
