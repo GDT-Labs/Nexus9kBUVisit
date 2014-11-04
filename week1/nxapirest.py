@@ -35,8 +35,10 @@ class NXRestAPI(object):
         auth = HTTPBasicAuth(self.user, self.password)
         if headers is not None:
             self.headers = headers
+        if url is not None:
+            self.url = url
         try:
-            resp = requests.post(url, data=payload, headers=headers,
+            resp = requests.post(self.url, data=payload, headers=self.headers,
                                  verify=False, auth=auth)
 
             if resp.status_code == requests.codes.ok:
