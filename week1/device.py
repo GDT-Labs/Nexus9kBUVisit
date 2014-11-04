@@ -1,11 +1,24 @@
 class Device(object):
     # Initializer
-    def __init__(self, ip, user, passw):
-        # An instance variable to hold the device's name
+    def __init__(self, name, ip, user, passw):
+        # An instance variable to hold the device's name, ip address, username and password
+        self._name = name
         self._ip = ip
         self._user = user
         self._passw = passw
+        
+    # Name Getter method
+    @property
+    def name(self):
+        """Get the current device name."""
+        return self._name
  
+    # Name Setter method
+    @name.setter
+    def name(self, new_name):
+        """Change the namefor this device. """
+        self._name = new_name
+        
     # IP Getter method
     @property
     def ip(self):
@@ -41,6 +54,8 @@ class Device(object):
         self._passw = new_passw
         
     def __str__(self):
+        return "{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
+    def __repr__(self):
         return "{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
     def __unicode__(self):
         return u"{\"device\": { \"ip\": "+str(self._ip)+", \"user\": "+str(self._user)+", \"passw\": "+str(self._passw)+"}}"
