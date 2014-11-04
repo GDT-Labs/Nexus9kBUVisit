@@ -1,5 +1,5 @@
 import nxapirest
-import dumper
+from dumper.dump import Dumper
 import device
 import cmdmgr
 import json
@@ -35,27 +35,27 @@ class Facts(object):
                 resp = resp['ins_api']['outputs']['output']['body']
                 dump_dict = dict(cmd=resp)
                 #print dump_dict
-                dumper.Dumper(self.device.name(), dump_dict)
+                dump = Dumper(dump_dict, self.device.name)
 
     def build_payload(self,cmd):
-        for inst in cmd:
-            payload = {
-                "ins_api": {
-                    "version": "1.0",
-                    "type": "cli_show",
-                    "chunk": "0",
-                    "sid": "1",
-                    "input": cmd[inst],
-                    "output_format": "json"
-                }
+        cmdkey, cmdval = cmd.popitem()
+        payload = {
+            "ins_api": {
+                "version": "1.0",
+                "type": "cli_show",
+                "chunk": "0",
+                "sid": "1",
+                "input": cmdval,
+                "output_format": "json"
             }
+        }
 
         print payload
         return payload
 
 
 def main():
-    dev = device.Device('FakeTest', '192.168.1.123', 'admin', 'Cisco.com')
+    dev = device.Device('192.168.1.123', 'admin', 'Cisco.com','FakeTest')
     cmd_mgr = cmdmgr.CommandManager()
     commands = cmd_mgr.get_commands()
 

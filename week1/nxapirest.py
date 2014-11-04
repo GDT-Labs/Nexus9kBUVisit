@@ -51,7 +51,7 @@ class NXRestAPI(object):
             else:
                 return None
         except requests.exceptions.ConnectionError:
-            print 'Error connecting to', url
+            print 'Error connecting to', self.url
             return None
 
 
