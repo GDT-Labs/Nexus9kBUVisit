@@ -27,13 +27,16 @@ class Facts(object):
 
         nx_reqestor = nxapirest.NXRestAPI('http://' + self.device.ip + '/ins')
         for cmd in self.command_list:
-            payload = self.build_payload(cmd)
+            cmdkey, cmdval, payload = self.build_payload(cmd)
 
             resp = nx_reqestor.get_nexus_info_request(headers=headers, payload=json.dumps(payload))
             if resp is not None:
                 resp = resp.json()
                 resp = resp['ins_api']['outputs']['output']['body']
-                dump_dict = dict(cmd=resp)
+
+                dump_dict = {}
+                dump_dict[cmdkey.lower()] = resp
+
                 #print dump_dict
                 dump = Dumper(dump_dict, self.device.name)
 
@@ -51,11 +54,11 @@ class Facts(object):
         }
 
         #print payload
-        return payload
+        return cmdkey, cmdval, payload
 
 
 def main():
-    dev = device.Device('192.168.1.123', 'admin', 'Cisco.com','FakeTest')
+    dev = device.Device('192.168.1.123', 'admin', 'Cisco.com','FakeTest2')
     cmd_mgr = cmdmgr.CommandManager()
     commands = cmd_mgr.get_commands()
 
