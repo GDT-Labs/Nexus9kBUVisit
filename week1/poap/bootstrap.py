@@ -25,10 +25,8 @@ configfile = page.read()
 #Enter configuration mode
 cli('conf t')
 
-i = 1
+header_lines, sep, cli_lines = configfile.partition('\n\n')
 
 #Enter each line into CLI
-for line in iter(configfile.splitlines()):
-    if i >= 5:
-        cli(line)
-    i += 1
+for line in iter(cli_lines.splitlines()):
+    cli(line)
