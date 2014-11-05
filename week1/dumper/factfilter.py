@@ -18,9 +18,30 @@ class FactFilter(object):
         for factkey, factvalue in factdict.iteritems():
             if factkey == 'cdp':
                 factdict['cdp'] = self.filtercdp(factkey, factvalue)
+            elif factkey == 'version':
+                factdict['version'] = self.filterversion(factkey, factvalue)
 
         #Return filtered fact dictionary, with all families
         return factdict
+
+    def filterversion(self, factkey, factvalue):
+
+        #This is a list of keys to delete
+        delkeys = [
+            'kern_uptm_hrs',
+            'kern_uptm_mins',
+            'kern_uptm_secs'
+        ]
+
+        #Delete all keys listed in delkeys
+        for key in delkeys:
+            try:
+                del factvalue[key]
+            except:
+                #Key doesn't exist, nothing to do
+                pass
+
+        return factvalue
 
     def filtercdp(self, factkey, factvalue):
         pruneddict = {}
