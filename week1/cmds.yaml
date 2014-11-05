@@ -1,5 +1,5 @@
 Commands:
-    - CDP: show cdp neighbor
+    - CDP: show cdp neighbor detail
     - VERSION: show version
 
 Devices:
