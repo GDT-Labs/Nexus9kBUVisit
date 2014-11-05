@@ -14,6 +14,7 @@ class Facts(object):
     def __init__(self, device, command_list):
         self.device = device
         self.command_list = command_list['Commands']
+        #print self.command_list
 
     def process_facts(self):
         headers = {
@@ -27,6 +28,7 @@ class Facts(object):
 
         nx_reqestor = nxapirest.NXRestAPI('http://' + self.device.ip + '/ins')
         for cmd in self.command_list:
+            print type(cmd)
             cmdkey, cmdval, payload = self.build_payload(cmd)
 
             resp = nx_reqestor.get_nexus_info_request(headers=headers, payload=json.dumps(payload))
@@ -41,17 +43,17 @@ class Facts(object):
                 dump = Dumper(dump_dict, self.device.name)
 
     def build_payload(self,cmd):
-        cmdkey, cmdval = cmd.popitem()
-        payload = {
-            "ins_api": {
-                "version": "1.0",
-                "type": "cli_show",
-                "chunk": "0",
-                "sid": "1",
-                "input": cmdval,
-                "output_format": "json"
+        for cmdkey, cmdval in cmd.iteritems():
+            payload = {
+                "ins_api": {
+                    "version": "1.0",
+                    "type": "cli_show",
+                    "chunk": "0",
+                    "sid": "1",
+                    "input": cmdval,
+                    "output_format": "json"
+                }
             }
-        }
 
         #print payload
         return cmdkey, cmdval, payload
