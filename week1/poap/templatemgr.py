@@ -15,15 +15,14 @@ class TemplateMgr(object):
         self.configfile = 'templates/config.yml'
 
     def process_id(self, hostid):
-        # Read YAML Host file
+        # Read YAML static config file
         with open(self.configfile) as _:
             self.config = yaml.load(_)
 
-        # Read the static config file
+        # Read the host config file
         with open('templates/dynamicconfig.yml') as _:
             dynamicconfig = yaml.load(_)
 
-        # Read YAML Template file
         # Extract config info from Host file based on id
         # Populate jinja2 template with host data
         return self.render_template('templates/leaftemplate.j2', dynamicconfig, hostid)
@@ -45,4 +44,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
