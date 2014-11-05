@@ -1,0 +1,6 @@
+SAL123456:
+    hostname: NX9508-01
+    mgmtaddr: 192.168.1.10/24
+SAL654321:
+    hostname: NX9508-02
+    mgmtaddr: 192.168.1.11/24
