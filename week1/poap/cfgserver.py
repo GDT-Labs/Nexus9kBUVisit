@@ -1,7 +1,7 @@
 from twisted.internet import reactor
 from twisted.web.resource import Resource
 from twisted.web.server import Site
-from templatemgr
+import templatemgr
 
 
 class webServer(Resource):
@@ -21,13 +21,14 @@ class webServer(Resource):
         if request.args:
             if 'cfg' in request.args:
                 param = request.args['cfg']
-                print = "You requested information for {0}".format(param[0])
-                template = templatemgr(param)
+                print "You requested information for {0}".format(param[0])
+                template = templatemgr.TemplateMgr()
+                return '{0}'.format(template.process_id(param[0]))
             else:
-                print = "Unknown parameter found."
+                print "Unknown parameter found."
         else:
-            print = "No parameters found in request."
-        return template
+            print "No parameters found in request."
+        return None
 
 
 def main():
