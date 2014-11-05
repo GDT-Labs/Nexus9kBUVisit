@@ -11,13 +11,24 @@ from cisco.vrf import *
 from cli import *
 import cisco
 
-hostid = cli('show license host-id')
+#Retrieve HOST ID
+hostid = clid('show license host-id')
 
 hostid = hostid[hostid.index('=') + 1:]
 
 set_global_vrf('management')
-page = urllib2.urlopen('http://208.113.172.68/')
+page = urllib2.urlopen('http://127.0.0.1:8880/?cfg=' + hostid)
 
+#Read contents of page
 configfile = page.read()
 
-print configfile
+#Enter configuration mode
+cli('conf t')
+
+i = 1
+
+#Enter each line into CLI
+for line in iter(configfile.splitlines()):
+    if i >= 5:
+        cli(line)
+    i += 1
