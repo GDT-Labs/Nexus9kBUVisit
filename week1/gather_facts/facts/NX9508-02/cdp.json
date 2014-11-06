@@ -205,7 +205,7 @@
         "port_id": "Ethernet1/7",
         "syslocation": "snmplocation",
         "sysname": "NX9396-01",
-        "v4addr": "123.123.123.3",
+        "v4addr": "10.255.255.123",
         "v4mgmtaddr": "192.168.1.123",
         "version": "Cisco Nexus Operating System (NX-OS) Software, Version 6.1(2)I3(1)",
         "version_no": "v2"
@@ -227,7 +227,7 @@
         "port_id": "Ethernet1/5",
         "syslocation": "snmplocation",
         "sysname": "NX9396-01",
-        "v4addr": "123.123.123.3",
+        "v4addr": "10.255.255.123",
         "v4mgmtaddr": "192.168.1.123",
         "version": "Cisco Nexus Operating System (NX-OS) Software, Version 6.1(2)I3(1)",
         "version_no": "v2"
@@ -249,7 +249,7 @@
         "port_id": "Ethernet1/8",
         "syslocation": "snmplocation",
         "sysname": "NX9396-01",
-        "v4addr": "123.123.123.3",
+        "v4addr": "10.255.255.123",
         "v4mgmtaddr": "192.168.1.123",
         "version": "Cisco Nexus Operating System (NX-OS) Software, Version 6.1(2)I3(1)",
         "version_no": "v2"
@@ -271,7 +271,7 @@
         "port_id": "Ethernet1/6",
         "syslocation": "snmplocation",
         "sysname": "NX9396-01",
-        "v4addr": "123.123.123.3",
+        "v4addr": "10.255.255.123",
         "v4mgmtaddr": "192.168.1.123",
         "version": "Cisco Nexus Operating System (NX-OS) Software, Version 6.1(2)I3(1)",
         "version_no": "v2"
