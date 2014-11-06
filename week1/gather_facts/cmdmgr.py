@@ -14,25 +14,46 @@ class CommandManager(object):
         Opens the given file, or tries the default cmds.yaml
         if no file is supplied.
         """
-        command_list = {}
+        yamlDict = {}
+        yamlDict = self.readYamlFile(filename)
+        return yamlDict['Commands']
+        
+    def get_devices(self, filename=None):
+        """
+        Retrieves the devices listed in the provided Yaml file. 
+        If no filename is specified the default will be used.
+        """
+        yamlDict = {}
+        yamlDict = self.readYamlFile(filename)
+        return yamlDict['Devices']
+
+    def readYamlFile(self, filename=None):
+        """
+        Opens the given file, or tries the default cmds.yaml
+        if no file is supplied.
+        """
+        yamlData = {}
         if isinstance(filename, str) and len(filename) > 0:
             self.command_file = filename
         try:
             yaml_file = open(self.command_file, 'r')
-            command_list = yaml.load(yaml_file)
+            yamlData = yaml.load(yaml_file)
             #print command_list
         except IOError as e:
             print "I/O error({0}): {1} {2}".format(e.errno, e.strerror, self.command_file)
-        return dict(command_list)
-
+        return dict(yamlData)
 
 def main():
     print "Loading Commands and Devices"
     cmd_mgr = CommandManager()
     cmds = cmd_mgr.get_commands()
+    devs = cmd_mgr.get_devices()
 
-    print "Sending commands to CommandFactory"
+    print "Printing commands"
     print cmds
+    print "Printing Devices"
+    print devs
+    print type(devs)
 
 if __name__ == '__main__':
     main()

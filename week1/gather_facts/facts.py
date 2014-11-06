@@ -13,7 +13,7 @@ class Facts(object):
 
     def __init__(self, device, command_list):
         self.device = device
-        self.command_list = command_list['Commands']
+        self.command_list = command_list
         #print self.command_list
 
     def process_facts(self):

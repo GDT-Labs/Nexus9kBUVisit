@@ -4,12 +4,13 @@ import facts
 
 def main():
     cmd_mgr = cmdmgr.CommandManager()
-    devicesAndCmds = cmd_mgr.get_commands()
-    for currentDevice in devicesAndCmds['Devices']:
+    commands = cmd_mgr.get_commands()
+    devices = cmd_mgr.get_devices()
+    for currentDevice in devices:
     	dev = device.Device(currentDevice['IP'],currentDevice['User'],currentDevice['Password'],currentDevice['DeviceName'])
     	print dev
 
-    	devFactsRetriever = facts.Facts(dev, devicesAndCmds)
+    	devFactsRetriever = facts.Facts(dev, commands)
         devFactsRetriever.process_facts()
     	
 if __name__ == "__main__":
