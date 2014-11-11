@@ -43,5 +43,6 @@ for prop in uniMo.dirtyProps:
 # import msvcrt
 # c = msvcrt.getch()
 # print 'you entered', 
-
+configReq.addMo(uniMo)
+moDir.commit(configReq)
 moDir.logout()
