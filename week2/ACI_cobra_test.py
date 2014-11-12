@@ -22,9 +22,9 @@ uniMo = moDir.lookupByDn('uni')
 fvTenantMo = Tenant(uniMo, 'ExampleCorp')
 
 #print inspect.getmembers(uniMo)
-mystatus=uniMo.status
-mychildren=uniMo.children
-numchildren=uniMo.numChildren
+mystatus = uniMo.status
+mychildren = uniMo.children
+numchildren = uniMo.numChildren
 #print inspect.getmembers(mystatus)
 #print type(mychildren)
 #print mychildren
@@ -42,7 +42,7 @@ for prop in uniMo.dirtyProps:
 
 # import msvcrt
 # c = msvcrt.getch()
-# print 'you entered', 
+# print 'you entered',
 configReq.addMo(uniMo)
 moDir.commit(configReq)
 moDir.logout()

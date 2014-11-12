@@ -16,11 +16,6 @@ class ACIObj(object):
         self.password = 'C1sco12345'
         self.tenantStr = 'testtenant'
         #self.set_auth('auth.yaml')
-        self.modir = self.apic_login()
-        self.mo = self.modir.lookupByDn('uni')
-
-        self.tenant = self.create_tenant(self.tenantStr)
-        self.commit_change()
 
     def look_up_mo(self, path, mo_name, set_mo=True):
         return self.modir.lookupByDn(path + mo_name)
@@ -38,19 +33,19 @@ class ACIObj(object):
     def apic_login(self):
         """Login to APIC"""
         lsess = LoginSession('https://' + self.host, self.user, self.password)
-        modir = MoDirectory(lsess)
-        modir.login()
+        self.modir = MoDirectory(lsess)
+        self.modir.login()
         print lsess.cookie
-        return modir
+        return self.modir
 
     def create_tenant(self, tenantStr):
         """Create a tenant"""
 
         # Get the top level policy universe directory
-        uniMo = self.modir.lookupByDn('uni')
+        self.uniMo = self.modir.lookupByDn('uni')
 
         # create the tenant object
-        return Tenant(uniMo, tenantStr)
+        return Tenant(self.uniMo, tenantStr)
 
     def commit_change(self, changed_object=None, print_xml=True):
         """Commit the changes to APIC"""
@@ -59,11 +54,20 @@ class ACIObj(object):
         # config_req.addMo(self.mo)
         # self.modir.commit(config_req)
         # modir.logout()
-        configReq = ConfigRequest()
-        configReq.addMo(self.mo)
-        self.modir.commit(configReq)
+        self.configReq = ConfigRequest()
+        self.configReq.addMo(self.uniMo)
+        self.modir.commit(self.configReq)
         self.modir.logout()
+
+    def do_build(self):
+        self.modir = self.apic_login()
+        #self.mo = self.modir.lookupByDn('uni')
+
+        self.tenant = self.create_tenant(self.tenantStr)
+        self.commit_change()
+
 
 if __name__ == '__main__':
     print "start"
     mo = ACIObj()
+    mo.do_build()
