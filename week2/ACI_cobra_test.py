@@ -6,7 +6,7 @@ from cobra.model.fv import Tenant
 from cobra.mit.naming import Dn
 import inspect
 import pprint
-
+import sys
 
 def do_login():
     apicUrl = 'https://198.18.133.200'
@@ -63,17 +63,22 @@ def turtles_down(session, referer):
         turtles_down(session, newMo)
 
 
-def main():
+def main(argv):
+    if len(argv[0]) > 0:
+        search_node = argv[0]
+    else:
+        search_node = 'uni'
+
     # Create a new session
     session = do_login()
     # Find a MO by class
     class_obj = class_object_lookup(session, 'fabricTopology')
     # Find a MO by DN
-    obj_dn = target_location_lookup(session, 'uni')
+    obj_dn = target_location_lookup(session, search_node)
     # Recursively iterate over all the child nodes for the given DN
     turtles_down(session, obj_dn)
     # Wrap it up
     logout(session)
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
