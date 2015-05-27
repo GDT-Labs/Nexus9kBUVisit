@@ -1,0 +1,21 @@
+Commands:
+    - CDP: show cdp neighbor detail
+    - VERSION: show version
+
+Devices:
+    - DeviceName: Pod1Spine1
+      IP: 172.31.217.133
+      User: admin
+      Password: cisco123
+    - DeviceName: Pod1Spine2
+      IP: 172.31.217.134
+      User: admin
+      Password: cisco123
+    - DeviceName: Pod1Leaf1
+      IP: 172.31.217.135
+      User: admin
+      Password: cisco123
+    - DeviceName: Pod1Leaf2
+      IP: 172.31.217.136
+      User: admin
+      Password: cisco123
